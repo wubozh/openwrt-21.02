@@ -18,8 +18,9 @@
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 wget https://github.com/vernesong/OpenClash/archive/refs/tags/v0.39.9-beta.tar.gz
-tar xvf v0.39.9-beta.tar.gz -C ./openwrt/package
-git clone https://github.com/1wrt/luci-app-ikoolproxy.git ./openwrt/package/luci-app-ikoolproxy
-cp ./.vermagic openwrt/
-cp -f ./kernel-defaults.mk openwrt/include/
-cp -f ./Makefile openwrt/package/kernel/linux/
+tar xvf v0.39.9-beta.tar.gz -C ./package
+git clone https://github.com/1wrt/luci-app-ikoolproxy.git ./package/luci-app-ikoolproxy
+
+cp ./.vermagic ./
+cp -f ./kernel-defaults.mk ./include/
+cp -f ./Makefile ./package/kernel/linux/
