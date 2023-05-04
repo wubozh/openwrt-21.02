@@ -24,3 +24,4 @@ git clone https://github.com/1wrt/luci-app-ikoolproxy.git ./package/luci-app-iko
 cp $GITHUB_WORKSPACE/.vermagic ./
 cp -f $GITHUB_WORKSPACE/kernel-defaults.mk ./include/
 cp -f $GITHUB_WORKSPACE/Makefile ./package/kernel/linux/
+cp -f $GITHUB_WORKSPACE/config-5.4 ./target/linux/x86/
