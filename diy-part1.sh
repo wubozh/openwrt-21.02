@@ -21,6 +21,6 @@ wget https://github.com/vernesong/OpenClash/archive/refs/tags/v0.39.9-beta.tar.g
 tar xvf v0.39.9-beta.tar.gz -C ./package
 git clone https://github.com/1wrt/luci-app-ikoolproxy.git ./package/luci-app-ikoolproxy
 
-cp ./.vermagic ./
-cp -f ./kernel-defaults.mk ./include/
-cp -f ./Makefile ./package/kernel/linux/
+cp $GITHUB_WORKSPACE/.vermagic ./
+cp -f $GITHUB_WORKSPACE/kernel-defaults.mk ./include/
+cp -f $GITHUB_WORKSPACE/Makefile ./package/kernel/linux/
