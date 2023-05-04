@@ -16,3 +16,7 @@
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+
+wget https://github.com/vernesong/OpenClash/archive/refs/tags/v0.39.9-beta.tar.gz
+tar xvf v0.39.9-beta.tar.gz -C ./openwrt/package
+git clone https://github.com/1wrt/luci-app-ikoolproxy.git ./openwrt/package/luci-app-ikoolproxy
