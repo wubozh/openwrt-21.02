@@ -13,5 +13,13 @@
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
+#删除lede源里的adguardhome
+rm -rf feeds/packages/net/adguardhome /y
+./scripts/feeds update -i packages
+./scripts/feeds install -a -p packages
+./scripts/feeds install kiddin9
+make defconfig
+
+#升级低版本openwrt里的go工具链到22.03版
 rm -rf ./feeds/packages/lang/golang
 svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang ./feeds/packages/lang/golang
